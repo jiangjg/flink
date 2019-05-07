@@ -88,9 +88,9 @@ object WindowWordCount {
 //    minByValue.writeAsText("/Users/GR/project/ScalaProjects/flink/quickstart/readme.md.bak", FileSystem.WriteMode.OVERWRITE).setParallelism(1)
 
 
-    val value = keyedStream.window(TumblingProcessingTimeWindows.of(Time.seconds(5L)))
-    value.process(new KeyedProcessFunction[String, (String,Int), (String, Int)] {
-    })
+//    val value = keyedStream.window(TumblingProcessingTimeWindows.of(Time.seconds(5L)))
+//    value.process(new KeyedProcessFunction[String, (String,Int), (String, Int)] {
+//    })
 
 
     val value1 = keyedStream.timeWindow(Time.seconds(5), Time.seconds(1))
